@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - 001</title>
+</head>
+
+<body>
+    <main>
+        <h1>Exercício – Atravessar a Rua</h1>
+    </main>
+
+    <p>Neste exercício, criaremos uma função que calcula a quantidade mínima de passos que uma pessoa precisa dar para
+        atravessar a rua.</p>
+    <p>A nossa pessoa deseja atravessar a rua. Inicialmente, a pessoa está localizada em uma posição X, e deseja chegar
+        a uma posição maior ou igual a Y. A cada passo que a nossa pessoa dá, ela percorre uma distância fixa que
+        denominaremos Z. Na nossa função, precisaremos:</p>
+    <ul>
+        <li>Contar a quantidade mínima de passos que a nossa pessoa precisa dar para atravessar a rua, ou seja, sair da
+            posição X e chegar ou ultrapassar a posição Y.</li>
+    </ul>
+    <p>Em nossa função, precisamos passar os parâmetros. Por exemplo, daremos 3 números inteiros, X, Y e Z, e a função
+        deverá retornar um número mínimo de passos que inicie da posição X e vá para uma posição maior ou igual a Y.</p>
+    <p>Dando como exemplo os números de entrada:</p>
+
+    <ul>
+        <li>X = 5;</li>
+        <li>Y = 40;</li>
+        <li>D = 1;</li>
+    </ul>
+    <p>Ao dar um passo, deve ser somada a distância inicial + a distância do passo dado, ou seja:</p>
+    <p>Ao dar um passo = 5 + 1;</p>
+    <p>Dois passos: 5 + 1 + 1.</p>
+    <p>E assim, sucessivamente, até chegar ou passar a distância final de 40.</p>
+
+    <p>Para realizar esse exercício, você precisará:</p>
+
+    <ul>
+        <li>Criar uma função chamada atravessaRua;</li>
+        <li>Essa função deverá receber três parâmetros: X, Y e Z;</li>
+        <li>Calcular a distância necessária;</li>
+    </ul>
+    <hr>
+    <label>X</label>
+    <input type="text" name="valorInicial" id="valorInicial">
+    <label>Y</label>
+    <input type="text" name="valorFinal" id="valorFinal">
+    <label>D</label>
+    <input type="text" name="distanciaPassos" id="distanciaPassos">
+    <button onclick="AtravessaRua()">Calcular</button>
+    <div id="resultado">
+
+    </div>
+
+    <script>
+
+        function AtravessaRua() {
+            var x = Number.parseInt(document.getElementById('valorInicial').value);
+            var y = Number.parseInt(document.getElementById('valorFinal').value);
+            var d = Number.parseInt(document.getElementById('distanciaPassos').value);
+            var result;
+            while (x < y) {
+                d++;
+                x++;
+            }
+
+            result = document.getElementById('resultado');
+            result.innerHTML = d.toString();
+
+
+        }
+    </script>
+</body>
+
+</html>
