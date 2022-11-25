@@ -12,13 +12,25 @@
             font: normal 1em Arial;
             color: black;
             text-align: center;
-            max-width: 700px;
-            min-width: 500px;
+
         }
 
         input#btt-tabuada {
             margin-top: 20px;
             padding: 5px 50px;
+        }
+
+        .tabuada {
+            border: 1px solid rgb(46, 46, 46);
+            padding: 10px;
+
+        }
+
+        #corpo {
+            border: 1px solid rgb(46, 46, 46);
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
         }
     </style>
 </head>
@@ -30,24 +42,29 @@
     <input type="number" name="myNumber" id="myNumber"> <br>
     <input id="btt-tabuada" type="button" value="Tabuada" onclick="Tabuada()">
 
-    <div id="tabuada">
+    <div id="corpo" name="corpo" hidden>
 
     </div>
 
     <script>
+        var corpo = document.getElementsByName('corpo')[0];
+
 
         function Tabuada() {
+            corpo.innerHTML += "<div class='tabuada'></div>"
             var entrada = Number.parseInt(document.getElementById('myNumber').value);
 
-
-            var resultado = document.querySelector('div#tabuada');
+            var resultado = document.getElementsByClassName('tabuada')[0];
 
 
 
             for (var i = 1; i <= 10; i++) {
-                resultado.innerHTML += `${entrada} x ${i} = ${entrada * i} <br>`;
+                resultado[i].innerHTML += `${entrada} x ${i} = ${entrada * i} <br>`;
             }
-            resultado.innerHTML += '<hr>';
+
+            
+
+
 
         }
 
