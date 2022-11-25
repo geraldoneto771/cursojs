@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciante - Manipulação de DOM</title>
+
+    <style>
+        body {
+            font: normal 1em Arial;
+            color: black;
+            text-align: center;
+            max-width: 700px;
+            min-width: 500px;
+        }
+
+        input#btt-tabuada {
+            margin-top: 20px;
+            padding: 5px 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Tabuada Simples com Input</h1>
+
+    <input type="number" name="myNumber" id="myNumber"> <br>
+    <input id="btt-tabuada" type="button" value="Tabuada" onclick="Tabuada()">
+
+    <div id="tabuada">
+
+    </div>
+
+    <script>
+
+        function Tabuada() {
+            var entrada = Number.parseInt(document.getElementById('myNumber').value);
+
+
+            var resultado = document.querySelector('div#tabuada');
+
+
+
+            for (var i = 1; i <= 10; i++) {
+                resultado.innerHTML += `${entrada} x ${i} = ${entrada * i} <br>`;
+            }
+            resultado.innerHTML += '<hr>';
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
