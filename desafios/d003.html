@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando Javascript</title>
+    <style>
+        body {
+            font: normal 1em Arial;
+        }
+
+        header {
+            font: normal 14pt Arial;
+            text-align: center;
+        }
+
+        main section {
+            display: block;
+            margin: auto;
+            width: 500px;
+        }
+
+        main section#card-saudacao {
+            text-align: center;
+            display: block;
+
+        }
+
+        section p {
+            font: bold 12pt Arial;
+        }
+
+        section input#btt-msg {
+            padding: 10px 25px;
+            background-color: #3cb371;
+            color: white;
+            border: 0px;
+            border-radius: 15px;
+        }
+
+        section input#txtTurno {
+            width: 150px;
+            height: 25px;
+
+        }
+
+        footer {
+            margin-top: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Testando Funções Javascript</h1>
+    </header>
+    <main>
+        <section id="dados_escolares">
+            <p>Dados escolares</p>
+            Turno: <input type="text" name="txtTurno" id="txtTurno" placeholder="Digite seu turno">
+            <input id="btt-msg" type="button" value="Mensagem" onclick="saudacao()">
+            <div id="card-saudacao">
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Geraldo Neto</p>
+    </footer>
+
+    <script>
+        function saudacao() {
+            var turno = document.getElementById('txtTurno').value;
+
+            var cardsaudacao = document.getElementById('card-saudacao');
+
+            if (turno == 'manha' || turno == 'manhã') {
+                cardsaudacao.innerHTML = `<p>Você estuda pela manhã</p>`;
+                cardsaudacao.innerHTML += `<p><strong>Bom dia!</strong></p>`;
+                cardsaudacao.innerHTML += `<img id="img-card" src="img/mascote-01.png" alt="">`
+                var imagem = document.getElementById('img-card');
+                imagem.style.width = '200px';
+                cardsaudacao.style.width = '300px';
+                cardsaudacao.style.height = '300px'
+                cardsaudacao.style.backgroundColor = '#6a5acd';
+                cardsaudacao.style.color = '#f0f0f0';
+                cardsaudacao.style.textAlign = 'center';
+                cardsaudacao.style.margin = '50px auto';
+                cardsaudacao.style.padding = '15px 0px 0px 0px';
+                cardsaudacao.style.borderRadius = '15px'
+            } else if (turno == 'tarde') {
+
+                cardsaudacao.innerHTML = `<p>Você estuda pela tarde</p>`;
+                cardsaudacao.innerHTML += `<p><strong>Boa tarde!</strong></p>`;
+                cardsaudacao.innerHTML += `<img id="img-card" src="img/mascote-02.png" alt="">`
+                var imagem = document.getElementById('img-card');
+                imagem.style.width = '200px';
+                cardsaudacao.style.width = '300px';
+                cardsaudacao.style.height = '300px'
+                cardsaudacao.style.backgroundColor = '#6a5acd';
+                cardsaudacao.style.color = '#f0f0f0';
+                cardsaudacao.style.textAlign = 'center';
+                cardsaudacao.style.margin = '50px auto';
+                cardsaudacao.style.padding = '15px 0px 0px 0px';
+                cardsaudacao.style.borderRadius = '15px'
+
+            } else if (turno == 'noite') {
+                cardsaudacao.innerHTML = `<p>Você estuda pela noite</p>`;
+                cardsaudacao.innerHTML += `<p><strong>Boa noite!</strong></p>`;
+                cardsaudacao.innerHTML += `<img id="img-card" src="img/mascote-03.png" alt="">`
+                var imagem = document.getElementById('img-card');
+                imagem.style.width = '200px';
+                cardsaudacao.style.width = '300px';
+                cardsaudacao.style.height = '300px'
+                cardsaudacao.style.backgroundColor = '#6a5acd';
+                cardsaudacao.style.color = '#f0f0f0';
+                cardsaudacao.style.textAlign = 'center';
+                cardsaudacao.style.margin = '50px auto';
+                cardsaudacao.style.padding = '15px 0px 0px 0px';
+                cardsaudacao.style.borderRadius = '15px'
+            }
+
+        }
+    </script>
+</body>
+
+</html>
