@@ -7,12 +7,21 @@
         <title>Hora do Dia</title>
         <link rel="stylesheet" href="style.css" />
     </head>
-    <body onload="carregar()">
+    <body>
         <header>
-            <h1>Titulo</h1>
+            <h1>Vamos contar</h1>
         </header>
         <section>
-            <div>Aqui vai aparecer a mensagem</div>
+            <div>
+                <label for="inicio">Inicio:</label>
+                <input type="number" name="iniciotxt" id="inicio" /> <br />
+                <label for="fim">Fim:</label>
+                <input type="number" name="fimtxt" id="fim" /> <br />
+                <label for="passo">Passo:</label>
+                <input type="number" name="passotxt" id="passo" /> <br />
+                <input type="button" value="Contar" onclick="contar()" />
+            </div>
+            <div id="resultado">Preparando a contagem...</section>div>
         </section>
         <footer>
             <p>&copy; Geraldo Pires</p>
