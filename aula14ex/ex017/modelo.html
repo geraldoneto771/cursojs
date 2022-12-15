@@ -4,15 +4,30 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Hora do Dia</title>
+        <title>Tabuada</title>
         <link rel="stylesheet" href="style.css" />
     </head>
-    <body onload="carregar()">
+    <body>
         <header>
-            <h1>Titulo</h1>
+            <h1>Tabuada</h1>
         </header>
         <section>
-            <div>Aqui vai aparecer a mensagem</div>
+            <div id="dados">
+                <label for="num">Número: </label>
+                <input type="number" name="num" id="numtxt" />
+                <input
+                    type="button"
+                    value="Gerar Tabuada"
+                    onclick="tabuada()"
+                />
+            </div>
+            <div id="resultado">
+                <select name="sectName" id="selectId" size="10">
+                    <option value="valor1">
+                        Entre com um valor acima
+                    </option>
+                </select>
+            </div>
         </section>
         <footer>
             <p>&copy; Geraldo Pires</p>

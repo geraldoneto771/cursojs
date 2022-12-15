@@ -21,6 +21,12 @@ div {
     text-align: center;
     padding: 8px;
 }
+div#dados {
+    text-align: left;
+}
+div#resultado {
+    text-align: left;
+}
 
 footer {
     color: white;
