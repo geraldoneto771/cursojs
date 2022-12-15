@@ -27,11 +27,17 @@ function contar() {
             alert('PASSO igual a Zero, Considerando PASSO 1');
             passo = 1;
         }
-
-        for (inicio; inicio <= fim; inicio += passo) {
-            resultado.innerHTML += `${inicio} &#x1F449`;
+        if (fim > inicio) {
+            for (inicio; inicio <= fim; inicio += passo) {
+                resultado.innerHTML += `${inicio} &#x1F449`;
+            }
+            resultado.innerHTML += '&#x1F3F4';
+        } else if (inicio > fim) {
+            for (inicio; inicio >= fim; inicio -= passo) {
+                resultado.innerHTML += `${inicio} &#x1F449`;
+            }
+            resultado.innerHTML += '&#x1F3F4';
         }
-        resultado.innerHTML += '&#x1F3F4';
     }
     /*
      */
