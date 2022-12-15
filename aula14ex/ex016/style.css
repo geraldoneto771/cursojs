@@ -27,3 +27,7 @@ footer {
     text-align: center;
     font-style: italic;
 }
+
+input {
+    margin-top: 15px;
+}
