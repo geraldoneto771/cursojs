@@ -6,12 +6,19 @@ function tabuada() {
         alert('Por favor, digite um número!');
     } else {
         select.innerHTML = '';
+        numero = Number(numero);
         for (let index = 0; index <= 10; index++) {
-            var opt = document.createElement('option');
-            //opt.setAttribute('value', index);
-            select.innerHTML += `<option value="|">${numero} x ${index} = ${
-                numero * index
-            }</option>`;
+            // criando um elemento option no html
+            let itemOption = document.createElement('option');
+
+            // adicionando conteudo ao elemento option
+            itemOption.text = `${numero} x ${index} = ${numero * index}`;
+
+            // adicionando value nos items
+            itemOption.value = `select${numero}`;
+
+            // adicionando o elemento option como filho do select
+            select.appendChild(itemOption);
         }
     }
 }
