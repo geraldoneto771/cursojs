@@ -18,12 +18,13 @@ section {
 }
 
 div {
-    text-align: center;
-    padding: 8px;
-}
-div#res,
-#final {
     text-align: left;
+}
+select {
+    margin-top: 10px;
+}
+input {
+    margin-top: 10px;
 }
 
 footer {
